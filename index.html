@@ -14,10 +14,11 @@
   <script>
     function someFunc() {
       var txt = document.getElementById("textform").value;
-      var par = document.createElement("p");
-      par.innerHTML = txt;
+      var div = document.createElement("div"); 
       
-      par.appendChild(txt);
+      div.innerHTML = "<h1>"+txt+"</h1>";
+      
+      document.getElementById("out").appendChild(div);
     }
   </script>
   
