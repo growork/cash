@@ -5,6 +5,20 @@
 </head>
 
 <body>
-<p>grdf</p>
+
+  <input type="text" value="" id="textform">
+  <input type="button" value="Расчитать" id="calculate" onclick="someFunc()">
+  
+  <script>
+    function someFunc() {
+      var txt = document.getElrmentById("calculate").value;
+      var par = document.createElement("p");
+      par.innerHTML = txt;
+      
+      body.appendChild(par);
+    }
+  </script>
+  
 </body>
+  
 </html>
