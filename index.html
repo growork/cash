@@ -9,16 +9,15 @@
   <input type="text" value="" id="textform">
   <input type="button" value="Расчитать" id="calculate" onclick="someFunc()">
   
+  <div id="out"><div>
+  
   <script>
     function someFunc() {
       var txt = document.getElementById("textform").value;
       var par = document.createElement("p");
       par.innerHTML = txt;
       
-      alert(txt);
-      
-      
-      body.appendChild(par);
+      body.appendChild(txt);
     }
   </script>
   
