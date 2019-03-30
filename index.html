@@ -27,12 +27,15 @@
     function calculateFunc() {
       var ratePerHour = document.getElementById("rate-per-hour").value;
       var hours = document.getElementById("hours").value;
-      var plan = document.getElementById("plan").value;
-      var mysteryShopper = document.getElementById("mystery-shopper").value;
+      var planProc = document.getElementById("plan").value;
+      var mysteryShopper = 60+(document.getElementById("mystery-shopper").value-100)*2;
       var salary = ratePerHour*hours;
-      var premiumInitial = salary*0.433;
-      var premiumUltimate = ((((premiumInitial/100)*60)/100)*plan)+((((premiumInitial/100)*40)/100)*mysteryShopper);
-      var forPay = ((salary+premiumUltimate)/100)*87
+      
+      if (planProc>=100) {
+        var plan=100+(planProc-100)*2;
+      }
+      
+      var forPay = salary*0.433*(plan*0.6+mysteryShopper*0.4)+salary;
       
       var div = document.createElement("div"); 
       
