@@ -26,17 +26,20 @@
   <div class="wrapper">
 		<div class="form-box">
       <p>Ставка(в час)</p>
-      <input type="text" value="" class="form-element" id="rate-per-hour">
+      <input type="number" value="" class="form-element" id="rate-per-hour">
   
       <p>Количество часов</p>
-      <input type="text" value="" class="form-element" id="hours">
+      <input type="number" value="" class="form-element" id="hours">
+
+			<p>Количество часов с двойной оплатой</p>
+			<input type="number" value="" class="form-element" id="double-pay">
   
       <p>Процент плана (без знака "%")</p>
 
-      <input type="text" value="" class="form-element" id="plan">
+      <input type="number" value="" class="form-element" id="plan">
   
       <p>Процент тайника (без знака "%")</p>
-      <input type="text" value="" class="form-element" id="mystery-shopper">
+      <input type="number" value="" class="form-element" id="mystery-shopper">
   
       <p></p>
       <input type="button" value="Расчитать" class="form-element" id="calculate" onclick="calculateFunc()">
@@ -47,12 +50,20 @@
   
   <script>
     function calculateFunc() {
-      var ratePerHour = document.getElementById("rate-per-hour").value;
-      var hours = document.getElementById("hours").value;
-      var planProc = document.getElementById("plan").value/100;
-      var mysteryShopper = 0.6+(((document.getElementById("mystery-shopper").value)/100)-0.6)*2;
-      var salary = ratePerHour*hours;
-      
+      var ratePerHour = parseFloat(document.getElementById("rate-per-hour").value);
+      var hours = parseFloat(document.getElementById("hours").value);
+      var doublePay = parseFloat(document.getElementById("double-pay").value);
+      var planProc = parseFloat(document.getElementById("plan").value/100);
+      var mysteryShopper = 0.6+((parseFloat(document.getElementById("mystery-shopper").value)/100)-0.6)*2;
+
+
+
+      var salary = (hours+doublePay)*ratePerHour;
+
+      var test = hours+doublePay;
+
+
+
       if (planProc>=100) {
         var plan=1+(planProc-1)*2;
       }else{
@@ -60,7 +71,8 @@
       }
       
       var forPay = (salary*0.433*(plan*0.6+mysteryShopper*0.4)+salary)*0.87;
-			alert("К выплате:\n~"+forPay);
+
+      alert("К выплате: ~"+forPay);
       /*
       var div = document.createElement("div"); 
       
