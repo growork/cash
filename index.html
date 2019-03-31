@@ -1,27 +1,32 @@
 <!DOCTIPE HTML>
 <html>
 <head>
-<meta charset="utf-8"> 
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <div class="wrapper">
+		<div class="form-box">
+      <p>Ставка(в час)</p>
+      <input type="text" value="" class="form-element" id="rate-per-hour">
   
-  <p>Ставка(в час)</p>
-  <input type="text" value="" id="rate-per-hour">
+      <p>Количество часов</p>
+      <input type="text" value="" class="form-element" id="hours">
   
-  <p>Количество часов</p>
-  <input type="text" value="" id="hours">
+      <p>Процент плана (без знака "%")</p>
+
+      <input type="text" value="" class="form-element" id="plan">
   
-  <p>Процент плана (без знака "%")</p>
-  <input type="text" value="" id="plan">
+      <p>Процент тайника (без знака "%")</p>
+      <input type="text" value="" class="form-element" id="mystery-shopper">
   
-  <p>Процент тайника (без знака "%")</p>
-  <input type="text" value="" id="mystery-shopper">
+      <p></p>
+      <input type="button" value="Расчитать" class="form-element" id="calculate" onclick="calculateFunc()">
+		<div>
   
-  <p></p>
-  <input type="button" value="Расчитать" id="calculate" onclick="calculateFunc()">
-  
-  <div id="result"><div>
+    <div id="result"><div>
+  </div>
   
   <script>
     function calculateFunc() {
