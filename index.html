@@ -4,7 +4,27 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/alert-style.css">
-	<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="js/calculateFunc.js"></script>
+  <script>
+    function showHide(active) {
+      if (active == 'procent') {
+        if (document.getElementById('survey')){
+          document.getElementById('survey').parentNode.removeChild(survey);
+        }
+        var obj_show = document.createElement('p');
+        obj_show.innerHTML = "<p id='myst'><input type='number' placeholder='Процент тайника' value='' class='form-element' id='mystery-shopper'></p>";
+        document.getElementById("mystery-shopper-block").appendChild(obj_show);
+      } else {
+        if (document.getElementById('myst')){
+          document.getElementById('myst').parentNode.removeChild(myst);
+        }
+        var obj_hide = document.createElement('p');
+        obj_hide.innerHTML = "<p id='survey'><input type='number' placeholder='Коэффициент опроса' value='' class='form-element' id='mystery-shopper'></p>";
+        document.getElementById("mystery-shopper-block").appendChild(obj_hide);
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -25,64 +45,31 @@
 
   <div class="wrapper">
 		<div class="form-box">
-      <p>Ставка(в час)</p>
-      <input type="number" value="" class="form-element" id="rate-per-hour">
-  
-      <p>Количество часов</p>
-      <input type="number" value="" class="form-element" id="hours">
+        <form>
+        <h2 class="h2">Введите данные</h2>
+        <input type="number" placeholder="Ставка (в час)" value="" class="form-element" id="rate-per-hour">
+    
+        <p></p>
+        <input type="number" placeholder="Количество часов" value="" class="form-element" id="hours">
 
-			<p>Количество часов с двойной оплатой</p>
-			<input type="number" value="" class="form-element" id="double-pay">
-  
-      <p>Процент плана (без знака "%")</p>
+  			<p></p>
+  			<input type="number" placeholder="Количество часов с двойной оплатой" value="" class="form-element" id="double-pay">
+    
+        <p></p>
+            <input type="number" placeholder="Процент плана (без знака '%')" value="" class="form-element" id="plan">
 
-      <input type="number" value="" class="form-element" id="plan">
-  
-      <p>Процент тайника (без знака "%")</p>
-      <input type="number" value="" class="form-element" id="mystery-shopper">
-  
-      <p></p>
-      <input type="button" value="Расчитать" class="form-element" id="calculate" onclick="calculateFunc()">
+        <input type="radio" name="mystery-shopper" value="proc" checked onchange="showHide('procent')">Процент тайника
+        <br>
+        <input type="radio" name="mystery-shopper" value="coef" onchange="showHide()">Коэффициент опроса
+
+        <div id="mystery-shopper-block">
+          <p id='myst'><input type='number' placeholder="Процент тайника" value='' class='form-element' id='mystery-shopper'></p>
+        </div>
+
+        <p></p>
+        <input type="button" value="Расчитать" class="form-element" id="calculate" onclick="calculateFunc()">
+      </form>
 		<div>
-  
-    <div id="result"><div>
   </div>
-  
-  <script>
-    function calculateFunc() {
-      var ratePerHour = parseFloat(document.getElementById("rate-per-hour").value);
-      var hours = parseFloat(document.getElementById("hours").value);
-      var doublePay = parseFloat(document.getElementById("double-pay").value);
-      var planProc = parseFloat(document.getElementById("plan").value/100);
-      var mysteryShopper = 0.6+((parseFloat(document.getElementById("mystery-shopper").value)/100)-0.6)*2;
-
-
-
-      var salary = (hours+doublePay)*ratePerHour;
-
-      var test = hours+doublePay;
-
-
-
-      if (planProc>=100) {
-        var plan=1+(planProc-1)*2;
-      }else{
-        var plan=planProc;
-      }
-      
-      var forPay = (salary*0.433*(plan*0.6+mysteryShopper*0.4)+salary)*0.87;
-
-      alert("К выплате: ~"+forPay);
-      /*
-      var div = document.createElement("div"); 
-      
-      div.innerHTML = "\n\n\n<h3>"+forPay+"<\/h3>";
-      
-      document.getElementById("result").appendChild(div);
-			*/
-    }
-  </script>
-  
 </body>
-  
 </html>

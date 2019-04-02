@@ -3,7 +3,7 @@
 }
 
 .form-box {
-	width: 15%;
+	width: 16%;
 	margin: auto;
 	border: 2px solid blue;
 	padding: 10px;
@@ -12,4 +12,8 @@
 
 .form-element {
 	width: 100%;
+}
+
+.h2 {
+	text-align: center;
 }
