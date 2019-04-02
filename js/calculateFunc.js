@@ -3,7 +3,13 @@
       var hours = parseFloat(document.getElementById("hours").value);
       var doublePay = parseFloat(document.getElementById("double-pay").value);
       var planProc = parseFloat(document.getElementById("plan").value/100);
-      var mysteryShopper = 0.6+((parseFloat(document.getElementById("mystery-shopper").value)/100)-0.6)*2;
+      var mysteryShopper = parseFloat(document.getElementById("mystery-shopper").value);
+
+      if (document.getElementById('myst')) {
+        mysteryShopper = mysteryShopper/100;
+      }
+
+      mysteryShopper = 0.6+(mysteryShopper-0.6)*2;
 
       var salary = hours*ratePerHour;
       doublePay = doublePay*ratePerHour;
