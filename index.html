@@ -40,9 +40,11 @@
         <p></p>
             <input type="number" placeholder="Процент плана (без знака '%')" value="" class="form-element" id="plan">
 
+      <div class="radio-box">
         <input type="radio" name="mystery-shopper" value="proc" checked onchange="showHide('procent')">Процент тайника
         <br>
         <input type="radio" name="mystery-shopper" value="coef" onchange="showHide()">Коэффициент опроса
+      </div>
 
         <div id="mystery-shopper-block">
           <p id='myst'><input type='number' placeholder="Процент тайника" value='' class='form-element' id='mystery-shopper'></p>
@@ -51,7 +53,5 @@
         <p></p>
         <input type="button" value="Расчитать" class="form-element" id="calculate" onclick="calculateFunc()">
       </form>
-		<div>
-  </div>
 </body>
 </html>
