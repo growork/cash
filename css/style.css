@@ -20,7 +20,7 @@ body {
 
 .h2 {
 	text-align: center;
-	font-size: 2em;
+	font-size: 2rem;
 }
 
 .radio-box {
@@ -31,13 +31,61 @@ body {
 	margin: 0;
 }
 
-@media screen and (max-device-width: 600px) {
-	.form-box {width: 90%;}
-	.form-element {height: 3%;}
-	.h2 {font-size: 3em;}
+.input-name {
+	margin: 20px 0 5px 0;
+	font-size: 1.2rem;
 }
 
-@media (max-width: 600px) {
+[type="radio"] {
+	display: none;
+}
+
+
+
+.radio-button {
+	cursor: pointer;
+}
+
+.radio-button div {
+	display: inline-block;
+	width: .8rem;
+	height: .8rem;
+	border-radius: 100px;
+	border: 1px solid red;
+	text-align: center;
+	float: left;
+}
+
+.radio-button div p {
+	display: inline-block;
+	width: 35%;
+	height: 35%;
+	margin-top: 30%;
+}
+
+.radio-button span {
+	margin: 0 0 0 5px;
+	font-size: 1rem;
+	margin: 0 0 0 5px;
+}
+
+[type="radio"]:checked+div p {
+	background-color: red;
+	border-radius: 100px;
+	
+
+}
+
+@media screen and (max-device-width: 800px) {
+	.form-box {width: 90%;}
+	.form-element {height: 70px;}
+	.h2 {font-size: 4rem;}
+	.input-name {font-size: 1.8rem;}
+	.radio-button div {width: 2.5vmax; height: 2.5vmax;}
+	.radio-button span {font-size: 1.6rem;}
+}
+
+@media (max-width: 800px) {
 		.form-box {width: 90%;}
-		.form-element {height: 3%;}
+		.form-element {height: 30px;}
 }
