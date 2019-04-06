@@ -1,4 +1,5 @@
 body {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	margin: 0;
 }
 
@@ -40,10 +41,9 @@ body {
 	display: none;
 }
 
-
-
 .radio-button {
 	cursor: pointer;
+	width: 100%;
 }
 
 .radio-button div {
@@ -51,7 +51,7 @@ body {
 	width: .8rem;
 	height: .8rem;
 	border-radius: 100px;
-	border: 1px solid red;
+	border: 1px solid #dc112e;
 	text-align: center;
 	float: left;
 }
@@ -70,19 +70,50 @@ body {
 }
 
 [type="radio"]:checked+div p {
-	background-color: red;
+	background-color: #dc112e;
 	border-radius: 100px;
 	
 
 }
 
+.button {
+	background: linear-gradient(rgb(220, 17, 46), 	rgb(240, 58, 83));
+	width: 60%;
+	margin: 0 auto;
+	height: 40px;
+	text-align: center;
+	user-select: none;
+	outline: none;
+	font-size: 1.2em;
+	padding: 0.5rem 0 0 0;
+	color: rgb(232, 232, 232);
+	border-radius: 5px;
+}
+
+.button:hover {
+	background: rgb(206, 16, 43);
+	cursor: pointer;
+}
+
+.button:active {
+	background: rgb(136, 11, 28);
+}
+
+.joke {
+	font-size: 0.8em;
+	margin: 0 auto;
+	text-align: center;
+}
+
 @media screen and (max-device-width: 800px) {
 	.form-box {width: 90%;}
-	.form-element {height: 70px;}
-	.h2 {font-size: 4rem;}
-	.input-name {font-size: 1.8rem;}
+	.form-element {height: 90px;}
+	.h2 {font-size: 5rem;}
+	.input-name {font-size: 2.5rem;}
 	.radio-button div {width: 2.5vmax; height: 2.5vmax;}
-	.radio-button span {font-size: 1.6rem;}
+	.radio-button span {font-size: 2rem;}
+	.button {height: 7rem; font-size: 3.5em; padding: 1.3rem 0 0 0;}
+	.joke {font-size: 0.9em;}
 }
 
 @media (max-width: 800px) {
