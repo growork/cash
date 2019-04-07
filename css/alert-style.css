@@ -11,7 +11,7 @@
 
 .alertm_all {
 	font-family: Arial;
-	width:396px;
+	width:496px;
 	padding:29px 43px;
 	border-radius: .25rem;
 	background:#fff;
@@ -45,7 +45,9 @@
 	line-height: 23px;
 }
 
-.alertm_wrapper { }
+.alertm_wrapper {
+	text-align: center;
+}
 .alertm_but {
 	display: inline-block;
 	font-weight: 400;
@@ -57,16 +59,15 @@
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	border: 1px solid transparent;
 	padding: .5rem 2rem;
 	font-size: 1rem;
 	border-radius: .25rem;
 	-webkit-transition: all .2s ease-in-out;
 	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
-	color: #fff;
-	background-color: #0275d8;
-	border-color: #0275d8;
+	color: rgb(232, 232, 232);
+	background: linear-gradient(rgb(220, 17, 46), 	rgb(240, 58, 83));
+	border-radius: 10px;
 	display: block;
 	margin-top: 25px;
 	cursor: pointer;
@@ -87,3 +88,29 @@ a.alertm_close {
 	font-size: 25px;
 }
 
+@media screen and (max-device-width: 800px) {
+	.alertm_all{
+		font-family: Arial;
+		width:70%;
+		padding:29px 43px;
+		border-radius: .25rem;
+		background:#fff;
+		position:fixed;
+		left:10%;
+		margin:0;
+		top:50%;
+		z-index:99999;
+	}
+	.alertm_but {
+		width: 60%;
+		margin:40px auto 0 auto;
+		height: 4rem;
+		outline: none;
+		font-size: 2.3em;
+		padding: 1.3rem 0 0 0;
+	}
+	.alertm_wrapper {
+		font-size: 3rem;
+		text-align: center;
+	}
+}

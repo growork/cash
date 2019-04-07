@@ -13,7 +13,7 @@
 	<script>
 		function alert(content,afterFunction){
 			$('<div class="alertm_overlay"></div>').appendTo('body');
-			$('<div class="alertm_all"><a href="#" onclick="alert_close('+afterFunction+'); return false" class="alertm_close">x</a><div class="alertm_wrapper">'+content+'</div><div class="alertm_but" onclick="alert_close('+afterFunction+'); return false">OK</div></div>').appendTo('body');
+			$('<div class="alertm_all"><div class="alertm_wrapper">'+content+'</div><div class="alertm_but" onclick="alert_close('+afterFunction+'); return false">OK</div></div>').appendTo('body');
 			$(".alertm_overlay, .alertm_all").fadeIn("slow");
 			$('.alertm_all').css('margin-top', (-1)*($('.alertm_all').height())+'px');
 		}
@@ -36,7 +36,7 @@
   			<p class="input-name">Количество часов с двойной оплатой</p>
   			<input type="number" value="" class="form-element" id="double-pay">
 
-        <p class="input-name">Процент плана (без знака '%')</p>
+        <p class="input-name">Процент плана</p>
         <input type="number" value="" class="form-element" id="plan">
 
         <div class="radio-box">
@@ -44,7 +44,6 @@
               <input type="radio" name="mystery-shopper" value="proc" checked onchange="showHide('procent')" id="mystery-radio">
               <div><p></p></div><span>Процент тайника</span>
             </label>
-            <br>
             <label class="radio-button">
               <input type="radio" name="mystery-shopper" value="coef" onchange="showHide()" id="survey-radio">
               <div><p></p></div><span>Коэффициент опроса</span>
@@ -58,7 +57,7 @@
         </div>
 
         <p></p>
-        <div class="button" id="calculate" onclick="calculateFunc()">Стать богатым<sup><sub>*</sub></sup></div>
+        <div class="button" id="calculate" onclick="calculateFunc()"><b>СТАТЬ БОГАТЫМ</b><sup>*</sup></div>
         <p class="joke"><sup><sub>*</sub></sup>но это не точно...</p>
       </form>
     </div>
