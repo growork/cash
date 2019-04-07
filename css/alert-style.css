@@ -70,13 +70,12 @@
 	border-radius: 10px;
 	display: block;
 	margin-top: 25px;
-	cursor: pointer;
 }
 
 .alertm_but:hover {
 	color: #fff;
-	background-color: #025aa5;
-	border-color: #01549b;
+	background: rgb(206, 16, 43);
+	cursor: pointer;
 }
 
 a.alertm_close {

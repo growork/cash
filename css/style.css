@@ -12,13 +12,13 @@ body {
 
 .form-box {
 	position: relative;
-	width: 22rem;
+	width: 25rem;
 	margin: 50px auto;
-	border: 2px solid black;
+	border: 1px solid rgba(0, 0, 0, 0.5);
 	padding: 20px;
 	border-radius: 30px 0px;
 	background: rgb(243, 244, 244);
-	box-shadow: 7px 7px 30px rgba(0, 0, 0, 0.7), -7px 0 30px rgba(0, 0, 0, 0.7);
+	box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.4), -7px 0 20px rgba(0, 0, 0, 0.4);
 }
 
 .form-element {
@@ -89,6 +89,7 @@ body {
 	padding: 0.5rem 0 0 0;
 	color: rgb(232, 232, 232);
 	border-radius: 10px;
+	box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.7), -1px -1px 7px rgba(0, 0, 0, 0.7);
 }
 
 .button:hover {
@@ -98,11 +99,12 @@ body {
 
 .button:active {
 	background: rgb(136, 11, 28);
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
 }
 
 .joke {
 	font-size: 0.8em;
-	margin: 0 auto;
+	margin: 10px auto 0 auto;
 	text-align: center;
 }
 
@@ -114,6 +116,6 @@ body {
 	.radio-button {min-height: 0.8rem;}
 	.radio-button div {width: 2rem; height: 2rem;}
 	.radio-button span {font-size: 2rem;}
-	.button {height: 7rem; font-size: 3em; padding: 1.3rem 0 0 0;}
-	.joke {font-size: 0.9em;}
+	.button {height: 6.3rem; font-size: 3em; padding: 1.3rem 0 0 0;}
+	.joke {font-size: 1.2em;}
 }
