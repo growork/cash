@@ -22,6 +22,6 @@
       
       var forPay = ((salary*0.433*(plan*0.6+mysteryShopper*0.4)+salary)+doublePay)*0.87;
 
-      alert("Примерная з/п: ~"+(parseInt(forPay)));
+      alert("К выплате: ~"+(parseInt(forPay)));
     }
     
