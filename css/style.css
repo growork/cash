@@ -80,7 +80,7 @@ body {
 .button {
 	background: linear-gradient(rgb(220, 17, 46), 	rgb(240, 58, 83));
 	width: 60%;
-	margin: 0 auto;
+	margin: 30px auto 0 auto;
 	height: 40px;
 	text-align: center;
 	user-select: none;
