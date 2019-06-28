@@ -8,7 +8,7 @@
       if (document.getElementById('myst')) {
         mysteryShopper = mysteryShopper/100;
       }
-if ((mysteryShopper >= 0.6)&&(mysteryShopper < 0.8) {
+if ((mysteryShopper >= 0.6)&&(mysteryShopper < 0.8)) {
       mysteryShopper = 0.6+(mysteryShopper-0.6)*2;
 } else if (mysteryShopper >= 0.8) {
 mysteryShopper = 1;
