@@ -16,20 +16,20 @@ mysteryShopper = 1;
 mysteryShopper = 0;
 }
 
-      var salary = hours*ratePerHour;
+      var salary = (hours+doublePay)*ratePerHour;
       doublePay = doublePay*ratePerHour;
 
       if ((planProc >= 80)&&(planProc <= 100)) {
         var plan = planProc/100;
       } else if (planProc > 100) {
-        var plan = 1+((planProc-100)*2)/100;
+        var plan = planProc + (1+((planProc-100)*2)/100);
       } else {
         var plan = 0;
       }
       
       var basePrem = salary * 0.433;
 
-      var forPay = (basePrem*plan*0.6 + basePrem*mysteryShopper*0.4)*0.87;
+      var forPay = (salary+(basePrem*plan*0.6 + basePrem*mysteryShopper*0.4))*0.87;
 
       alert("К выплате: ~"+(parseInt(forPay)));
     }
