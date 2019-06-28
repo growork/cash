@@ -19,13 +19,17 @@ mysteryShopper = 0;
       var salary = hours*ratePerHour;
       doublePay = doublePay*ratePerHour;
 
-      if (planProc>=100) {
-        var plan=1+(planProc-1)*2;
+      if ((planProc >= 80)&&(planProc <= 100)) {
+        var plan = planProc/100;
+      } else if (planProc > 100) {
+        var plan = 1+((planProc-100)*2)/100;
       } else {
-        var plan=planProc;
+        var plan = 0;
       }
       
-      var forPay = ((salary*0.433*(plan*0.6+mysteryShopper*0.4)+salary)+doublePay)*0.87;
+      var basePrem = salary * 0.433;
+
+      var forPay = (basePrem*plan*0.6 + basePrem*mysteryShopper*0.4)*0.87;
 
       alert("К выплате: ~"+(parseInt(forPay)));
     }
