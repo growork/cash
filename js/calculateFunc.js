@@ -22,7 +22,7 @@ mysteryShopper = 0;
       if ((planProc >= 0.8)&&(planProc <= 1)) {
         var plan = planProc;
       } else if (planProc > 1) {
-        var plan = planProc + (1+((planProc-1)*2));
+        var plan = 1+((planProc-1)*2);
       } else {
         var plan = 0;
       }
