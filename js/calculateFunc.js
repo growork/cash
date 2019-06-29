@@ -2,7 +2,7 @@
       var ratePerHour = parseFloat(document.getElementById("rate-per-hour").value);
       var hours = parseFloat(document.getElementById("hours").value);
       var doublePay = parseFloat(document.getElementById("double-pay").value);
-      var planProc = parseFloat(document.getElementById("plan").value);
+      var planProc = parseFloat(document.getElementById("plan").value/100);
       var mysteryShopper = parseFloat(document.getElementById("mystery-shopper").value);
 
       if (document.getElementById('myst')) {
@@ -20,9 +20,9 @@ mysteryShopper = 0;
       doublePay = doublePay*ratePerHour;
 
       if ((planProc >= 80)&&(planProc <= 100)) {
-        var plan = planProc/100;
+        var plan = planProc;
       } else if (planProc > 100) {
-        var plan = planProc + (1+((planProc-100)*2)/100);
+        var plan = planProc + (1+((planProc-1)*2));
       } else {
         var plan = 0;
       }
