@@ -19,9 +19,9 @@ mysteryShopper = 0;
       var salary = (hours+doublePay)*ratePerHour;
       doublePay = doublePay*ratePerHour;
 
-      if ((planProc >= 80)&&(planProc <= 100)) {
+      if ((planProc >= 0.8)&&(planProc <= 1)) {
         var plan = planProc;
-      } else if (planProc > 100) {
+      } else if (planProc > 1) {
         var plan = planProc + (1+((planProc-1)*2));
       } else {
         var plan = 0;
