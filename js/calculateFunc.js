@@ -27,7 +27,7 @@ mysteryShopper = 0;
         var plan = 0;
       }
       
-      var basePrem = salary * 0.433;
+      var basePrem = salary * 0.4;
 
       var forPay = (salary+(basePrem*plan*0.6 + basePrem*mysteryShopper*0.4))*0.87;
 
