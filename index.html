@@ -1,17 +1,17 @@
 <!DOCTIPE HTML>
 <html>
 <head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/alert-style.css">
-	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-  <script type="text/javascript" src="js/calculateFunc.js"></script>
-  <script type="text/javascript" src="js/showHide.js"></script>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/alert-style.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/calculateFunc.js"></script>
+    <script type="text/javascript" src="js/showHide.js"></script>
 </head>
 
 <body>
 	<script>
-		function alert(content,afterFunction){
+        function alert(content,afterFunction){
 			$('<div class="alertm_overlay"></div>').appendTo('body');
 			$('<div class="alertm_all"><div class="alertm_wrapper">'+content+'</div><div class="alertm_but" onclick="alert_close('+afterFunction+'); return false">OK</div></div>').appendTo('body');
 			$(".alertm_overlay, .alertm_all").fadeIn("slow");
@@ -23,44 +23,49 @@
 		}
 	</script>
 
-  <div class="wrapper">
-    <div class="form-box">
-      <form>
-        <h2 class="h2">Введите данные</h2>
-        <p class="input-name">Ставка (в час)</p>
-        <input type="number" value="" class="form-element" id="rate-per-hour">
+    <div class="wrapper">
+        <div class="form-box">
+          <form>
+            <h2 class="h2">Введите данные</h2>
 
-        <p class="input-name">Количество часов</p>
-        <input type="number" value="" class="form-element" id="hours">
+            <p class="input-name">Ставка (в час)</p>
+            <input type="number" value="0" class="form-element" id="rate-per-hour">
 
-  			<p class="input-name">Количество часов с двойной оплатой</p>
-  			<input type="number" value="" class="form-element" id="double-pay">
+            <p class="input-name">Количество часов</p>
+            <input type="number" value="0" class="form-element" id="hours">
 
-        <p class="input-name">Процент плана</p>
-        <input type="number" value="" class="form-element" id="plan">
+            <p class="input-name">Количество часов с двойной оплатой</p>
+            <input type="number" value="0" class="form-element" id="double-pay">
 
-        <div class="radio-box">
-            <label class="radio-button">
-              <input type="radio" name="mystery-shopper" value="proc" checked onchange="showHide('procent')" id="mystery-radio">
-              <div><p></p></div><span>Процент тайника</span>
-            </label>
-            <label class="radio-button">
-              <input type="radio" name="mystery-shopper" value="coef" onchange="showHide()" id="survey-radio">
-              <div><p></p></div><span>Коэффициент опроса</span>
-            </label>
+            <p class="input-name">Количество дежурств</p>
+            <input type="number" value="0" class="form-element" id="duty">
+
+            <p class="input-name">Процент плана</p>
+            <input type="number" value="0" class="form-element" id="plan">
+
+            <div class="radio-box">
+                <label class="radio-button">
+                  <input type="radio" name="mystery-shopper" value="proc" checked onchange="showHide('procent')" id="mystery-radio">
+                  <div><p></p></div><span>Процент тайника</span>
+                </label>
+                <label class="radio-button">
+                  <input type="radio" name="mystery-shopper" value="coef" onchange="showHide()" id="survey-radio">
+                  <div><p></p></div><span>Коэффициент опроса</span>
+                </label>
+            </div>
+
+            <div id="mystery-shopper-block">
+                <p class="input-name" id='myst'>Процент тайника
+                    <input type='number' value="0" class='form-element' id='mystery-shopper'>
+                </p>
+            </div>
+
+            <br>
+
+            <div class="button" id="calculate" onclick="calculateFunc()"><b>РАСЧИТАТЬ</b></div>
+
+          </form>
         </div>
-
-        <div id="mystery-shopper-block">
-          <div id='myst'><p class="input-name">Процент тайника</p>
-            <input type='number' value='' class='form-element' id='mystery-shopper'>
-          </div>
-        </div>
-
-        <p></p>
-        <div class="button" id="calculate" onclick="calculateFunc()"><b>РАСЧИТАТЬ</b></div>
-        
-      </form>
     </div>
-  </div>
 </body>
 </html>
