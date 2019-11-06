@@ -29,6 +29,6 @@ function calculateFunc() {
 
     var basePrem = salary * 0.4333;
     var forPay = (salary + (basePrem * plan * 0.6 + basePrem * mysteryShopper * 0.4)) * 0.87;
-    
+
     alert("К выплате: ~" + (parseInt(forPay)));
 }
