@@ -29,19 +29,19 @@
             <h2 class="h2">Введите данные</h2>
 
             <p class="input-name">Ставка (в час)</p>
-            <input type="number" value="0" class="form-element" id="rate-per-hour">
+            <input type="text" pattern="^(\d+([.,]?\d+)*){1}$" value="" class="form-element" id="rate-per-hour">
 
             <p class="input-name">Количество часов</p>
-            <input type="number" value="0" class="form-element" id="hours">
+            <input type="text" pattern="^(\d+([.,]?\d+)*){1}$" value="" class="form-element" id="hours">
 
             <p class="input-name">Количество часов с двойной оплатой</p>
-            <input type="number" value="0" class="form-element" id="double-pay">
+            <input type="text" pattern="^(\d+([.,]?\d+)*){1}$" value="" class="form-element" id="double-pay">
 
             <p class="input-name">Количество дежурств</p>
-            <input type="number" value="0" class="form-element" id="duty">
+            <input type="text" pattern="^(\d+([.,]?\d+)*){1}$" value="" class="form-element" id="duty">
 
             <p class="input-name">Процент плана</p>
-            <input type="number" value="0" class="form-element" id="plan">
+            <input type="text" pattern="^(\d+([.,]?\d+)*){1}$" value="" class="form-element" id="plan">
 
             <div class="radio-box">
                 <label class="radio-button">
@@ -56,11 +56,11 @@
 
             <div id="mystery-shopper-block">
                 <p class="input-name" id='myst'>Процент тайника
-                    <input type='number' value="0" class='form-element' id='mystery-shopper'>
+                    <input type="text" pattern="^(\d+([.,]?\d+)*){1}$" value="" class='form-element' id='mystery-shopper'>
                 </p>
             </div>
 
-            <div class="button" id="calculate" onclick="calculateFunc()"><b>РАСЧИТАТЬ</b></div>
+              <div class="button" id="calculate" onclick="calculateFunc()"><b>РАСЧИТАТЬ</b></div>
 
           </form>
         </div>
