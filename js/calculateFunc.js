@@ -4,6 +4,7 @@ function calculateFunc() {
     var doublePay = parseFloat(document.getElementById("double-pay").value);
     var planProc = (parseFloat(document.getElementById("plan").value)) / 100;
     var mysteryShopper = parseFloat(document.getElementById("mystery-shopper").value);
+    var duty = parseFloat(document.getElementById("duty").value);
 
     if (document.getElementById('myst')) {
         mysteryShopper = mysteryShopper / 100;
@@ -17,7 +18,8 @@ function calculateFunc() {
         mysteryShopper = 0;
     }
 
-    var salary = (hours + doublePay) * ratePerHour;
+    duty = duty * ratePerHour * 0.2;
+    var salary = ((hours + doublePay) * ratePerHour) + duty;
 
     if ((planProc >= 0.8) && (planProc <= 1)) {
         var plan = planProc;
@@ -25,6 +27,7 @@ function calculateFunc() {
         var plan = 1 + ((planProc - 1) * 2);
     } else {
         var plan = 0;
+
     }
 
     var basePrem = salary * 0.4333;
