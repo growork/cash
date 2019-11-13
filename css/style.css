@@ -110,7 +110,7 @@ body {
 
 @media screen and (max-device-width: 800px) {
 	.form-box {width: 90%;}
-	.form-element {height: 90px; font-size: 3em;}
+	.form-element {height: 90px; font-size: 1rem;}
 	.h2 {font-size: 5rem;}
 	.input-name {font-size: 2.5rem;}
 	.radio-button {min-height: 0.8rem;}
