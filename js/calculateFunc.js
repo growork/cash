@@ -19,7 +19,7 @@ function calculateFunc() {
     }
 
    
-    var salary = (hours * ratePerHour).toFixed(2);
+    var salary = Math.round(parseFloat(hours * ratePerHour));
 
     if ((planProc >= 0.8) && (planProc <= 1)) {
         var plan = planProc;
