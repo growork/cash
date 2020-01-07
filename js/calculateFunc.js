@@ -19,7 +19,7 @@ function calculateFunc() {
     }
 
    
-    var salary = hours * ratePerHour;
+    var salary = (hours * ratePerHour).toFixed(2);
 
     if ((planProc >= 0.8) && (planProc <= 1)) {
         var plan = planProc;
@@ -36,5 +36,5 @@ function calculateFunc() {
     var basePrem = salary * 0.433;
     var forPay = ((salary + (basePrem * plan * 0.6 + basePrem * mysteryShopper * 0.4)) + doublePay + duty) * 0.87;
 
-    alert("К выплате: ~" + (parseInt(forPay)));
+    alert("К выплате: ~" + Math.round(forPay));
 }
