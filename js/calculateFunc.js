@@ -2,8 +2,8 @@ function calculateFunc() {
     var ratePerHour = parseFloat(document.getElementById("rate-per-hour").value);
     var hours = parseFloat(document.getElementById("hours").value);
     var doublePay = parseFloat(document.getElementById("double-pay").value);
-    var planProc = (parseFloat(document.getElementById("plan").value)) / 100;
-    var mysteryShopper = parseFloat(document.getElementById("mystery-shopper").value);
+    var planProc = Math.round(parseFloat(document.getElementById("plan").value)) / 100;
+    var mysteryShopper = Math.round(parseFloat(document.getElementById("mystery-shopper").value));
     var duty = parseFloat(document.getElementById("duty").value);
 
     if (document.getElementById('myst')) {
