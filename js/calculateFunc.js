@@ -18,8 +18,8 @@ function calculateFunc() {
         mysteryShopper = 0;
     }
 
-    duty = duty * ratePerHour * 0.2;
-    var salary = ((hours + doublePay) * ratePerHour) + duty;
+   
+    var salary = hours * ratePerHour;
 
     if ((planProc >= 0.8) && (planProc <= 1)) {
         var plan = planProc;
@@ -30,8 +30,11 @@ function calculateFunc() {
 
     }
 
+    duty = duty * ratePerHour * 0.2;
+    doublePay = doublePay * ratePerHour;
+
     var basePrem = salary * 0.433;
-    var forPay = (salary + (basePrem * plan * 0.6 + basePrem * mysteryShopper * 0.4)) * 0.87;
+    var forPay = ((salary + (basePrem * plan * 0.6 + basePrem * mysteryShopper * 0.4)) + doublePay + duty) * 0.87;
 
     alert("К выплате: ~" + (parseInt(forPay)));
 }
