@@ -11,7 +11,7 @@ function showHide(active) {
             document.getElementById('myst').parentNode.removeChild(myst);
         }
         var obj_hide = document.createElement('p');
-        obj_hide.innerHTML = "<p class='input-name' id='survey'>Коэффициент опроса<input type='text' pattern='^(\d+([.,]?\d+)*){1}$' value='' class='form-element' id='mystery-shopper'></p>";
+        obj_hide.innerHTML = "<p class='input-name' id='survey'>Коэффициент опроса<input type='text' pattern='^(\d+([.,]?\d+)*){1}$' value='' class='form-element' id='polling-rate'></p>";
         document.getElementById("mystery-shopper-block").appendChild(obj_hide);
     }
 }
