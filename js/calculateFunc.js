@@ -3,23 +3,21 @@ function calculateFunc() {
     var hours = parseFloat(document.getElementById("hours").value);
     var doublePay = parseFloat(document.getElementById("double-pay").value);
     var planProc = Math.round(parseFloat(document.getElementById("plan").value)) / 100;
-    var mysteryShopper = Math.round(parseFloat(document.getElementById("mystery-shopper").value));
     var duty = parseFloat(document.getElementById("duty").value);
 
-    if (document.getElementById('myst')) {
-        mysteryShopper = mysteryShopper / 100;
+    if (document.getElementById("mystery-shopper")) {
+        var mysteryShopper = Math.round(parseFloat(document.getElementById("mystery-shopper").value));
+        if ((mysteryShopper >= 0.6) && (mysteryShopper < 0.8)) {
+            mysteryShopper = 0.6 + (mysteryShopper - 0.6) * 2;
+        } else if (mysteryShopper >= 0.8) {
+            mysteryShopper = 1;
+        } else {
+            mysteryShopper = 0;
+        }
+    } else if (document.getElementById("polling-rate")) {
+        var mysteryShopper = parseFloat(document.getElementById("polling-rate"));
     }
 
-    if ((mysteryShopper >= 0.6) && (mysteryShopper < 0.8)) {
-        mysteryShopper = 0.6 + (mysteryShopper - 0.6) * 2;
-    } else if (mysteryShopper >= 0.8) {
-        mysteryShopper = 1;
-    } else {
-        mysteryShopper = 0;
-    }
-
-   
-    var salary = Math.round(parseFloat(hours * ratePerHour));
 
     if ((planProc >= 0.8) && (planProc <= 1)) {
         var plan = planProc;
@@ -30,6 +28,8 @@ function calculateFunc() {
 
     }
 
+    
+    var salary = Math.round(parseFloat(hours * ratePerHour));
     duty = duty * ratePerHour * 0.2;
     doublePay = doublePay * ratePerHour;
 
