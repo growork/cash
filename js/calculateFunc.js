@@ -15,7 +15,7 @@ function calculateFunc() {
             mysteryShopper = 0;
         }
     } else if (document.getElementById("survey")) {
-        var mysteryShopper = parseFloat(document.getElementById("polling-rate"));
+        var mysteryShopper = parseFloat(document.getElementById("mystery-shopper"));
     }
 
 
