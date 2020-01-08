@@ -5,7 +5,7 @@ function calculateFunc() {
     var planProc = Math.round(parseFloat(document.getElementById("plan").value)) / 100;
     var duty = parseFloat(document.getElementById("duty").value);
 
-    if (document.getElementById("mystery-shopper")) {
+    if (document.getElementById("myst")) {
         var mysteryShopper = Math.round(parseFloat(document.getElementById("mystery-shopper").value));
         if ((mysteryShopper >= 0.6) && (mysteryShopper < 0.8)) {
             mysteryShopper = 0.6 + (mysteryShopper - 0.6) * 2;
@@ -14,7 +14,7 @@ function calculateFunc() {
         } else {
             mysteryShopper = 0;
         }
-    } else if (document.getElementById("polling-rate")) {
+    } else if (document.getElementById("survey")) {
         var mysteryShopper = parseFloat(document.getElementById("polling-rate"));
     }
 
