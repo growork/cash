@@ -33,7 +33,7 @@ function calculateFunc() {
     duty = duty * ratePerHour * 0.2;
     doublePay = doublePay * ratePerHour;
 
-    var basePrem = Math.round(parseFloat(salary * 0.4));
+    var basePrem = Math.round(parseFloat(salary * 0.3));
     var forPay = ((salary + (basePrem * plan * 0.6 + basePrem * mysteryShopper * 0.4)) + doublePay + duty) * 0.87;
 
     alert("К выплате: ~" + Math.round(forPay));
