@@ -30,50 +30,9 @@ body {
 	font-size: 2rem;
 }
 
-.radio-box {
-	margin: 20px 0 0 0;
-}
-
 .input-name {
 	margin: 20px 0 5px 0;
 	font-size: 1.2rem;
-}
-
-[type="radio"] {
-	display: none;
-}
-
-.radio-button {
-	display: block;
-	cursor: pointer;
-	min-width: 100%;
-}
-
-.radio-button div {
-	display: inline-block;
-	width: .8rem;
-	height: .8rem;
-	border-radius: 100px;
-	border: 1px solid #dc112e;
-	text-align: center;
-}
-
-.radio-button div p {
-	display: inline-block;
-	width: 34%;
-	height: 34%;
-	margin: 30% auto;
-}
-
-.radio-button span {
-	margin: 0 0 0 5px;
-	font-size: 1rem;
-}
-
-[type="radio"]:checked+div p {
-	background-color: #dc112e;
-	border-radius: 100px;
-	display: block;
 }
 
 .button {
