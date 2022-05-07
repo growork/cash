@@ -43,25 +43,10 @@
             <p class="input-name">Процент плана</p>
             <input type="text" pattern="^(\d+([.,]?\d+)*){1}$" value="" class="form-element" id="plan">
 
-            <div class="radio-box">
-                <label class="radio-button">
-                  <input type="radio" name="mystery-shopper" value="proc" checked onchange="showHide('procent')" id="mystery-radio">
-                  <div><p></p></div><span>Процент тайника</span>
-                </label>
-                <label class="radio-button">
-                  <input type="radio" name="mystery-shopper" value="coef" onchange="showHide()" id="survey-radio">
-                  <div><p></p></div><span>Коэффициент опроса</span>
-                </label>
-            </div>
+            <p class="input-name">Процент тайника</p>
+            <input type="text" pattern="^(\d+([.,]?\d+)*){1}$" value="" class='form-element' id='mystery-shopper'>
 
-            <div id="mystery-shopper-block">
-                <p class="input-name" id='myst'>Процент тайника
-                    <input type="text" pattern="^(\d+([.,]?\d+)*){1}$" value="" class='form-element' id='mystery-shopper'>
-                </p>
-            </div>
-
-              <div class="button" id="calculate" onclick="calculateFunc()"><b>РАСЧИТАТЬ</b></div>
-
+            <div class="button" id="calculate" onclick="calculateFunc()"><b>РАСЧИТАТЬ</b></div>
           </form>
         </div>
     </div>
