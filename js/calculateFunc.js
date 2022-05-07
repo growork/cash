@@ -5,23 +5,21 @@ function calculateFunc() {
     var planProc = Math.round(parseFloat(document.getElementById("plan").value)) / 100;
     var duty = parseFloat(document.getElementById("duty").value);
 
-    if (document.getElementById("myst")) {
-        var mysteryShopper = Math.round(parseFloat(document.getElementById("mystery-shopper").value)) / 100;
-        if ((mysteryShopper >= 0.6) && (mysteryShopper < 0.8)) {
-            mysteryShopper = 0.6 + (mysteryShopper - 0.6) * 2;
-        } else if (mysteryShopper >= 0.8) {
-            mysteryShopper = 1;
-        } else {
-            mysteryShopper = 0;
-        }
-    } else if (document.getElementById("survey")) {
-        var mysteryShopper = parseFloat(document.getElementById("mystery-shopper").value);
+    // Расчёт коэффициента тайного покупателя
+    var mysteryShopper = Math.round(parseFloat(document.getElementById("mystery-shopper").value)) / 100;
+    if (mysteryShopper >= 0.6) {
+        mysteryShopper = 0.6 + (mysteryShopper - 0.6) * 2;
+    } else {
+        mysteryShopper = 0;
     }
 
-
+    // Расчёт коэффициента плана
     if ((planProc >= 0.8) && (planProc <= 1)) {
         var plan = planProc;
     } else if (planProc > 1) {
+        if (planProc > 1.6) {
+            planProc = 1.6;
+        }
         var plan = 1 + ((planProc - 1) * 2);
     } else {
         var plan = 0;
